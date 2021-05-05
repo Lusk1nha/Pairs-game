@@ -1,0 +1,113 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.modal.activated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .container {
+  background-color: white;
+  max-width: 400px;
+  width: 85%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1.5rem 1rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.modal .container .modal-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #063852;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal .container section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .container section .button {
+  background-color: white;
+  width: 60%;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal--win section .button {
+  border: 1px solid #F0810F;
+  color: #F0810F;
+}
+
+.modal--win section .button:hover {
+  background-color: #F0810F;
+  color: white;
+}
+
+.modal--lose section .button {
+  border: 1px solid #F0810F;
+  color: #F0810F;
+}
+
+.modal--lose section .button:hover {
+  background-color: #F0810F;
+  color: white;
+}
+/*# sourceMappingURL=modal.css.map */

@@ -1,0 +1,148 @@
+$background-color: #011a27;
+$title-color: white;
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open sans', sans-serif;
+
+}
+
+body {
+  background-color: $background-color;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 4rem 1rem 1rem;
+
+  .title {
+    width: 100%;
+
+    text-align: center;
+
+    color: $title-color;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+  }
+
+  .life-container {
+    width: 100%;
+
+    color: rgb(241, 43, 43);
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+#card-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+
+  padding: 4rem 0 2rem;
+
+  .card {
+    background: transparent;
+
+    max-width: 200px;
+    width: 80%;
+    height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+    border-radius: 0.5rem;
+    
+    cursor: pointer;
+    
+    perspective: 1000px;
+
+    transition: transform 0.3s, opacity 0.2s;
+    
+    &:hover {
+      transform: scale(1.07, 1.07);
+      opacity: 90%;
+
+    }
+
+    & .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      text-align: center;
+      transform-style: preserve-3d;
+
+      border-radius: 1rem;
+
+      transition: transform 0.5s;
+
+    }
+
+    &.clicked {
+      pointer-events: none;
+
+      & .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &.solved {
+      pointer-events: none;
+
+      & .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    & .card-front, & .card-back {
+      background-color: white;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+
+    }
+
+    & .card-back {
+      transform: rotateY(180deg);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .objective {
+        font-size: 4rem;
+        font-weight: 700;
+  
+      }
+
+    }
+  }
+}

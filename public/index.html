@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pairs game</title>
 
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/modal/modal.css" />
+  <link rel="stylesheet" href="./styles/responsive.css" />
+  <link rel="shortcut icon" href="./assets/memory.png" />
+
 </head>
 <body>
+  <h1 class="title">Choose the right pairs</h1>
+  <h3 class="life-container">Life - 2</h3>
+
+  <div id="card-container"></div>
+
+  <div class="modal modal--win">
+    <div class="container">
+      <h5 class="modal-title">You win</h5>
+      <section>
+        <button class="button button--restart">New Game</button>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal modal--lose">
+    <div class="container">
+      <h5 class="modal-title">You lose</h5>
+
+      <section>
+        <button class="button button--restart">Restart</button>
+      </section>
+    </div>
+  </div>
   
+  <script src="./index.js"></script>
 </body>
 </html>
